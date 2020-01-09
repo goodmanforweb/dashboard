@@ -1,0 +1,358 @@
+/** 
+* 表格组件样式
+* author：twy
+* create time: 2018-5-9
+*/
+.widget-table {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px #ccc solid;
+  user-select: none;
+}
+.widget-table-top {
+  padding: 8px 8px;
+}
+.widget-table-main table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.widget-table-tool {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 100%;
+}
+.widget-table-tool button {
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.widget-table-calc {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.widget-table-calc table {
+  border-collapse: collapse;
+}
+.widget-table-calc-td-div {
+  display: inline-flex;
+  justify-content: center;
+}
+.widget-table-calc td {
+  padding: 6px 4px;
+  text-align: center;
+  border: 1px #bfbfbf solid;
+  border-top-width: 2px;
+  border-left-width: 0;
+}
+.widget-table-calc td i {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin-right: 3px;
+  background-image: url(./images/icon.png);
+  background-repeat: no-repeat;
+}
+.widget-table-calc-icon__sum {
+  background-position: 2px 0;
+}
+.widget-table-calc-icon__average {
+  background-position: -27px 0;
+}
+.widget-table-calc-icon__max {
+  background-position: -62px 0;
+}
+.widget-table-calc-icon__min {
+  background-position: -93px 0;
+}
+.widget-table-calc-icon__count {
+  background-position: -145px 0;
+}
+.widget-table-calc-icon__norepeatCount {
+  background-position: -120px 0;
+}
+.widget-table-calc-icon__variance {
+  background-position: -175px 0;
+}
+.widget-table-calc-icon__standardDeviation {
+  background-position: -211px 0;
+}
+.widget-table-calc-icon__median {
+  background-position: -244px 0;
+}
+.widget-table-th-div,
+.widget-table-td-div {
+  padding: 6px 4px;
+  position: relative;
+}
+.widget-table-td-div.wrap {
+  white-space: normal;
+}
+.widget-table-td-div.no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.widget-table-tool{
+    visibility: hidden;
+}
+.widget-table-tool i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.widget-table-icon-export{
+    background: url(./images/icon.png) no-repeat -3px -29px;
+}
+.widget-table:hover .widget-table-tool{
+    visibility: visible;
+}
+
+/*列弹框配置*/
+.widget-table-column-overlay {
+  background-color: rgb(233, 239, 242);
+  border-radius: 5px;
+  box-shadow: rgb(233, 233, 233) 1px 1px 15px -1px;
+  border: 1px #ddd solid;
+}
+.widget-table-column-overlay .ant-form-item-label label {
+  color: rgba(0, 0, 0, 0.65);
+}
+.widget-table-column-overlay .ant-popover-arrow {
+  display: none;
+}
+.widget-table-column-overlay .ant-popover-inner {
+  background-color: transparent;
+}
+.widget-table-column-overlay .ant-popover-inner-content {
+  width: 282px;
+  min-height: 220px;
+}
+.widget-table-column-config {
+  width: 250px;
+  position: relative;
+}
+.widget-table-column-config .ant-form-item {
+  margin-bottom: 0;
+}
+.widget-table-column-config__form {
+}
+.widget-table-column-config__dataTypeDetail {
+  color: #fff;
+  box-shadow: 0px 0px 4px 1px #ccc;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: #eee;
+  padding: 10px;
+}
+.widget-table-column-config__btns {
+  margin-top: 10px;
+  height: 24px;
+}
+.widget-table-column-config__btns button {
+  float: right;
+}
+.column-config-radius-colorpicker {
+  display: inline-flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}
+.column-config-radius-colorpicker .color-picker-trigger {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0;
+  border-radius: 50%;
+}
+.option-svg-battery-wrapper {
+  height: 20px;
+  width: 45px;
+}
+.option-svg-battery-wrapper > div {
+  height: 100%;
+}
+.option-svg-battery-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+
+/* 重置anti table css */
+.widget-table-main .ant-table-pagination.ant-pagination {
+  margin: 5px 5px 0 0;
+}
+.widget-table-main .ant-table-footer {
+  padding: 0;
+  top: -2px;
+}
+.widget-table-main .ant-table-footer {
+  background-color: transparent;
+}
+#app .widget-table-main .ant-table-thead > tr > th,
+#app .widget-table-main .ant-table-tbody > tr > td {
+  padding: 0;
+}
+#app .widget-table-main .ant-table-thead > tr > th > span {
+  padding: 6px 4px;
+  display: inline-block;
+  min-height: 27px;
+}
+#app .widget-table-main .ant-table-bordered .ant-table-body > table {
+  border-left: 0;
+}
+.widget-table-main .ant-table-small {
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.widget-table-main .ant-pagination-item-active a {
+  color: #1890ff !important;
+}
+.widget-table-main .ant-table-header {
+  background-color: transparent;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow-x: hidden !important;
+}
+.widget-table-main .ant-table-small > .ant-table-content .ant-table-header {
+  background-color: transparent;
+}
+.widget-table-main
+  .ant-table-fixed-header
+  > .ant-table-content
+  > .ant-table-scroll
+  > .ant-table-body {
+  background-color: transparent;
+  top: -1px;
+  overflow-x: auto !important;
+}
+/*重写样式，列宽按配置设置列宽*/
+.widget-table-main .ant-table table {
+  width: 100% !important;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.widget-table-main .ant-table colgroup col {
+  min-width: 70px !important;
+}
+.table-content-height-ubeyond .ant-table-header,
+.table-content-height-ubeyond .ant-table-body,
+.table-content-height-ubeyond .widget-table-calc {
+  margin-right: -17px !important;
+}
+.widget-table-main .ant-table-thead .anticon-setting {
+  color: #999;
+  margin-left: 3px;
+}
+.widget-table-main .ant-table-small.ant-table-bordered .ant-table-footer {
+  border: 0;
+}
+
+/*数据条*/
+.data-bar {
+  height: 20px;
+  position: relative;
+}
+.data-bar.separate {
+  padding-right: 20%;
+}
+.data-bar__line {
+  height: 100%;
+  position: relative;
+}
+.data-bar__line:hover {
+  background-color: rgba(204, 204, 204, 0.5);
+}
+.data-bar__bg {
+  position: absolute;
+  height: 100%;
+  white-space: nowrap;
+}
+.data-bar__bg span {
+  position: absolute;
+  top: 0;
+  line-height: 20px;
+}
+.data-bar.separate .data-bar__bg span {
+}
+.data-bar__zero {
+  position: absolute;
+  height: 22px;
+  bottom: 0;
+  left: 0;
+  border-left: 1px #333 solid;
+  width: 0;
+}
+.data-bar__reference {
+  position: absolute;
+  height: 22px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-left: 2px #333 solid;
+}
+
+/*趋势箭头*/
+.trend-arrow-i {
+  font-size: 16px;
+  font-weight: bold;
+}
+.trend-arrow-i.anticon-arrow-down {
+  color: #ff0303;
+  transform: rotate(-45deg);
+}
+.trend-arrow-i.anticon-arrow-up {
+  color: #19fa28;
+  transform: rotate(45deg);
+}
+.trend-arrow-i.anticon-arrow-right {
+  color: #ea986c;
+}
+.trend-arrow-i.circle {
+  border-radius: 50%;
+}
+.trend-arrow-i.anticon-arrow-down.circle {
+  color: #fff;
+  background-color: #ff0303;
+  transform: rotate(0);
+}
+.trend-arrow-i.anticon-arrow-up.circle {
+  color: #fff;
+  background-color: #19fa28;
+  transform: rotate(0);
+}
+.trend-arrow-i.anticon-arrow-right.circle {
+  color: #fff;
+  background-color: #ea986c;
+  transform: rotate(0);
+}
+
+/*圆点*/
+.circle-point {
+  display: inline-flex;
+  align-items: center;
+}
+.circle-point i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/*象形图*/
+.pictograph {
+  display: inline-flex;
+  align-items: center;
+}
+.svg-battery-wrapper > div {
+  display: flex;
+  align-items: center;
+}
+.pictograph .svg-battery {
+  width: 45px;
+  height: 20px;
+}

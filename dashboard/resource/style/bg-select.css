@@ -1,0 +1,32 @@
+.bg-select {
+  min-height: 28px;
+  border:1px solid #666;
+  padding: 2px;
+}
+
+.bg-select-items {
+  padding:0;
+  margin:0;
+}
+.bg-select-items li {
+  line-height: 28px;
+  display: inline-block;
+}
+.bg-select-items li.bg-select-item {
+  color: rgba(0,0,0,.65);
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  cursor: default;
+  
+  font-size: 12px;
+}
+.bg-select-items li.bg-select-input input {
+  border-width: 0;
+  font-size: 100%;
+  height: 100%;
+  width: .75em;
+  background: transparent;
+  outline: 0;
+  border-radius: 4px;
+  
+}
